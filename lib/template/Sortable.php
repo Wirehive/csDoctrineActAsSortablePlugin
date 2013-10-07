@@ -415,7 +415,7 @@ class Doctrine_Template_Sortable extends Doctrine_Template
       {
         $q->addWhere($field . ' = ?', $object[$field]['id']);
       }
-      elseif (is_null($object[$field])) 
+      elseif (is_null($object[$field]))
       {
           $q->addWhere($field . ' IS NULL');
       }
@@ -447,7 +447,7 @@ class Doctrine_Template_Sortable extends Doctrine_Template
       {
         $q->addWhere($field . ' = ?', $object[$field]['id']);
       }
-      elseif (is_null($object[$field])) 
+      elseif (is_null($object[$field]))
       {
           $q->addWhere($field . ' IS NULL');
       }
@@ -482,7 +482,7 @@ class Doctrine_Template_Sortable extends Doctrine_Template
      {
        $q->addWhere($field . ' = ?', $object[$field]['id']);
      }
-     if (is_null($object[$field])) 
+     if (is_null($object[$field]))
      {
        $q->addWhere($field . ' IS NULL');
      }
@@ -493,7 +493,7 @@ class Doctrine_Template_Sortable extends Doctrine_Template
    }
 
    $last = $q->limit(1)->fetchOne();
-   $finalPosition = $last ? $last->get($this->_options['name']) : 0;
+   $finalPosition = $last ? $last->get($this->_options['name']) : 1;
 
    return (int)$finalPosition;
   }
